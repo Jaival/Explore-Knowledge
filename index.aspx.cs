@@ -11,4 +11,8 @@ public partial class index : System.Web.UI.Page
     {
 
     }
+    protected void Login_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("login.aspx");
+    }
 }

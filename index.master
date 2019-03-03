@@ -36,7 +36,8 @@
         
         </asp:ContentPlaceHolder>
     </div>
-    </form>
+       
+   
     
 	<header>
 		<div class="container-fluid position-relative no-side-padding">
@@ -48,15 +49,14 @@
 			<ul class="main-menu visible-on-click" id="main-menu">
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Categories</a></li>
-				<li><a href="#">Features</a></li>
-				<li><a href="login.aspx">Login/Register</a></li>
+				<li><a href="login.aspx" onclick="Login_Click">Login/Register</a></li>
 			</ul><!-- main-menu -->
 
 			<div class="src-area">
-				<form>
+				<%--<form runat="server">--%>
 					<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
 					<input class="src-input" type="text" placeholder="Type of search"/>
-				</form>
+				<%--</form>--%>
 			</div>
 
 		</div><!-- conatiner -->
@@ -440,5 +440,6 @@
 	<script src="common-js/bootstrap.js"></script>
 
 	<script src="common-js/scripts.js"></script>
+  </form>    
 </body>
 </html>
