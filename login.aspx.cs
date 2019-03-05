@@ -13,7 +13,8 @@ public partial class login : System.Web.UI.Page
     }
     protected void Index_Click(object sender, EventArgs e)
     {
-        Response.Redirect("index.aspx");
+        Application["Username"] = TextBox1.Text;
+        Response.Redirect("after-login.aspx");
     }
 
     protected void Register_Click(object sender, EventArgs e)

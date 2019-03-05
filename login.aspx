@@ -25,20 +25,30 @@
                 <div class="input-group mb-3" runat="server">
                   <div class="input-group-prepend" runat="server">
                   </div>
-                  <input type="text" class="form-control" placeholder="Username" id="username">
+                  <%--<input type="text" class="form-control" placeholder="Username" id="username">
+                    <input id="Text1" type="text" />--%>
+                    <asp:TextBox ID="TextBox1" class="form-control" placeholder="Username" runat="server"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Username required!!!" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Use Alphanumeric Characters from length 2-25" ControlToValidate="TextBox1" ValidationExpression="^[a-zA-Z0-9_]{2,25}$"></asp:RegularExpressionValidator>
                 </div>
                 <div class="input-group mb-4" runat="server">
                   <div class="input-group-prepend" runat="server">
                   </div>
-                  <input type="password" class="form-control" placeholder="Password" id="password">
+                    <asp:TextBox ID="TextBox2" class="form-control" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
+                    <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Password Required !!!"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Must contain one Lowercase characters, one Uppercase characters, one Digit" ValidationExpression="^[a-zA-Z0-9]{8,}$"></asp:RegularExpressionValidator>
                 </div>
                 <div class="row" runat="server">
                   <div class="col-6" runat="server">
                         <asp:button runat="server" class="btn btn-primary px-4" Text="Login" OnClick="Index_Click"/>
-                  </div>
-                  <div class="col-6 text-right" runat="server">
+                        </div>
+                  <%--<div class="col-6 text-right" runat="server">
                       <asp:button runat="server" class="btn btn-link px-0" Text="Forgot password?"/>
-                  </div>
+                  </div>--%>
                 </div>
               </div>
             </div>

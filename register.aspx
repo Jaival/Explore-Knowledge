@@ -37,14 +37,24 @@
               <div class="input-group mb-3" runat="server">
                 <div class="input-group-prepend" runat="server">
                 </div>
-                <input type="text" class="form-control" placeholder="Username" >
+                  <asp:TextBox ID="TextBox1" class="form-control" placeholder="Username" runat="server"></asp:TextBox>
+                  <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Username required!!!" ControlToValidate="TextBox1"></asp:RequiredFieldValidator>
+                <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Use Alphanumeric Characters from length 2-25" ControlToValidate="TextBox1" ValidationExpression="^[a-zA-Z0-9_]{2,25}$"></asp:RegularExpressionValidator>
+                <%--<input type="text" class="form-control" placeholder="Username" >--%>
               </div>
 
               <div class="input-group mb-3" runat="server">
                 <div class="input-group-prepend" runat="server">
                   
                 </div>
-                <input type="text" class="form-control" placeholder="Email">
+                  <asp:TextBox ID="TextBox2" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                  <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Email Required !!!"></asp:RequiredFieldValidator>
+                    <br />
+                  <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox2" ErrorMessage="Must contain @, '.'" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                <%--<input type="text" class="form-control" placeholder="Email">--%>
               </div>
 
               <div class="input-group mb-3" runat="server">
@@ -52,14 +62,24 @@
                   
                
                 </div>
-                <input type="password" class="form-control" placeholder="Password">
+                  <asp:TextBox ID="TextBox3" class="form-control" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>
+                  <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Password Required !!!"></asp:RequiredFieldValidator>
+                    <br />
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="TextBox3" ErrorMessage="Must contain one Lowercase characters, one Uppercase characters, one Digit" ValidationExpression="^[a-zA-Z0-9]{8,}$"></asp:RegularExpressionValidator>
+                <%--<input type="password" class="form-control" placeholder="Password">--%>
               </div>
 
               <div class="input-group mb-4" runat="server">
                 <div class="input-group-prepend" runat="server">
                   
                 </div>
-                <input type="password" class="form-control" placeholder="Repeat password">
+                  <asp:TextBox ID="TextBox4" class="form-control" placeholder="Confirm password" runat="server" TextMode="Password"></asp:TextBox>
+                  <br />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="TextBox4" ErrorMessage="Confirm password Required !!!"></asp:RequiredFieldValidator>
+                    <br />
+                  <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Confirm your Password it must be same" ControlToCompare="TextBox3" ControlToValidate="TextBox4"></asp:CompareValidator>
+                <%--<input type="password" class="form-control" placeholder="Repeat password">--%>
               </div>
               <asp:button class="btn btn-block btn-success" runat="server" text="Create Account"/>
             </div>
