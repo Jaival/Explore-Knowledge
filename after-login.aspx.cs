@@ -9,6 +9,6 @@ public partial class after_login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Label1.Text = Convert.ToString(Application["Username"]);
+        userid.Text = Convert.ToString(Application["Username"]);
     }
 }

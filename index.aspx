@@ -6,5 +6,9 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-    <a href="login.aspx" onclick="Login_Click">Login/Register</a>
+    <a href="login.aspx" onclick="Login_Click">Login</a>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+    <a href="register.aspx" onclick="Register_Click">Register</a>
 </asp:Content>

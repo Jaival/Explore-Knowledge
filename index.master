@@ -43,6 +43,8 @@
 				<li><a href="#">Categories</a></li>
                 <li><asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">                
                 </asp:ContentPlaceHolder></li>
+                <li><asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">                
+                </asp:ContentPlaceHolder></li>
                 
 			</ul><!-- main-menu -->
 
