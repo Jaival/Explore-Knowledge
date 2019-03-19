@@ -82,7 +82,7 @@
                   <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Confirm your Password it must be same" ControlToCompare="TextBox3" ControlToValidate="TextBox4"></asp:CompareValidator>
                 <%--<input type="password" class="form-control" placeholder="Repeat password">--%>
               </div>
-              <asp:button class="btn btn-block btn-success" runat="server" text="Create Account"/>
+              <asp:button class="btn btn-block btn-success" runat="server" text="Create Account" OnClick="Register_Click"/>
             </div>
 <!--
             <div class="card-footer p-4">

@@ -13,11 +13,11 @@
 -->
   <head runat="server">
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <%--  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template" />
     <meta name="author" content="Łukasz Holeczek" />
-    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard" />
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard" />--%>
     <!-- Icons-->
     <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />
     <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -29,7 +29,7 @@
 
   <body>
       <form runat="server">
-          <div runat="server" class="app flex-row align-items-center">
+   <div runat="server" class="app flex-row align-items-center">
     <div runat="server" class="container">
       <div runat="server"  class="row justify-content-center">
         <div class="col-md-6" runat="server">
@@ -39,22 +39,18 @@
 <%--              <p  class="text-muted">Create your account</p>--%>
               <div class="input-group mb-3" runat="server">
                 <div class="input-group-prepend" runat="server">
+                    <asp:GridView ID="GridView1" runat="server">
+
+                    </asp:GridView>
                 </div>
-                  <asp:TextBox ID="TextBox1" class="form-control" placeholder="Username" runat="server"></asp:TextBox>
-                  <br />
-                    
-                <br />
-                    
-                <%--<input type="text" class="form-control" placeholder="Username" >--%>
+
               </div>
 
               <div class="input-group mb-3" runat="server">
                 <div class="input-group-prepend" runat="server">
-                  
-                </div>
-                  <asp:TextBox ID="TextBox2" class="form-control" placeholder="Email" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="id" class="form-control" placeholder="Id" runat="server"></asp:TextBox>
                   <br />
-                    
+                </div>     
                   
                 <%--<input type="text" class="form-control" placeholder="Email">--%>
               </div>
@@ -65,7 +61,7 @@
                
                 </div>
 <%--                  <asp:TextBox ID="TextBox3" class="form-control" placeholder="Password" runat="server" TextMode="Password"></asp:TextBox>--%>
-                <asp:button class="btn btn-block btn-success" runat="server" text="Verified"/>
+                <asp:button class="btn btn-block btn-success" runat="server" text="Verified" OnClick="Verify"/>
                     
                 <%--<input type="password" class="form-control" placeholder="Password">--%>
               </div>
@@ -75,11 +71,10 @@
                   
                 </div>
 <%--                  <asp:TextBox ID="TextBox4" class="form-control" placeholder="Confirm password" runat="server" TextMode="Password"></asp:TextBox>--%>
-                  <asp:button class="btn btn-block btn-danger" runat="server" text="Decline"/>
+                  <asp:button class="btn btn-block btn-danger" runat="server" text="Decline" OnClick="Decline"/>
                 
                 <%--<input type="password" class="form-control" placeholder="Repeat password">--%>
               </div>
-              <asp:button class="btn btn-block btn-primary" runat="server" text="Next"/>
             </div>
 <!--
             <div class="card-footer p-4">
