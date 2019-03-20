@@ -39,7 +39,7 @@
                 </div>
                 <div class="row" runat="server">
                   <div class="col-6" runat="server">
-                        <asp:button runat="server" class="btn btn-primary px-4" Text="Login" OnClick="Index_Click"/>
+                        <asp:button runat="server" class="btn btn-primary px-4" Text="Login" OnClick="Login_Click"/>
                         </div>
                   <%--<div class="col-6 text-right" runat="server">
                       <asp:button runat="server" class="btn btn-link px-0" Text="Forgot password?"/>

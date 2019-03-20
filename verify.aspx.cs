@@ -10,7 +10,7 @@ using System.Data.SqlClient;
 
 public partial class verify : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=D:\Project\Explore-Knowledge\App_Data\Database.mdf;Integrated Security = True");
+    SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|Database.mdf;Integrated Security = True");
     String ver = "Verified"; 
     String nver = "Not Verified";
     protected void Page_Load(object sender, EventArgs e)

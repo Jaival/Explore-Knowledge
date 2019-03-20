@@ -10,13 +10,12 @@ using System.Data.SqlClient;
 
 public partial class login : System.Web.UI.Page
 {
-    SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=D:\Project\Explore-Knowledge\App_Data\Database.mdf;Integrated Security = True");
+    SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|Database.mdf;Integrated Security = True");
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
     }
-    protected void Index_Click(object sender, EventArgs e)
+    protected void Login_Click(object sender, EventArgs e)
     {
         String User;
         String Pass;
@@ -34,7 +33,6 @@ public partial class login : System.Web.UI.Page
         con.Close();
 
         DataTable dt = dset.Tables[0];
-        
         
 
         if (User == Session["Username"].ToString() && Pass == Session["Password"].ToString())
