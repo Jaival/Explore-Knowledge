@@ -45,6 +45,8 @@
                 </asp:ContentPlaceHolder></li>
                 <li><asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">                
                 </asp:ContentPlaceHolder></li>
+                <li><asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">                
+                </asp:ContentPlaceHolder></li>
                 
 			</ul><!-- main-menu -->
 
@@ -364,8 +366,9 @@
 				</div><!-- col-lg-8 col-md-12 -->
 
 			</div><!-- row -->
-
-			<a class="load-more-btn" href="#"><b>LOAD MORE</b></a>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder5" runat="server"> 
+                                   
+                </asp:ContentPlaceHolder>
 
 		</div><!-- container -->
 	</section><!-- section -->

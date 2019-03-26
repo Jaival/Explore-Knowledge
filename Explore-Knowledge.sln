@@ -7,21 +7,20 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Explore-Knowledge", ".", "{
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_14711"
-		Debug.AspNetCompiler.PhysicalPath = "..\Explore-Knowledge\"
+		Debug.AspNetCompiler.PhysicalPath = "D:\Project\Explore-Knowledge\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14711\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.VirtualPath = "/localhost_14711"
-		Release.AspNetCompiler.PhysicalPath = "..\Explore-Knowledge\"
+		Release.AspNetCompiler.PhysicalPath = "D:\Project\Explore-Knowledge\"
 		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_14711\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "14711"
-		SlnRelativePath = "..\Explore-Knowledge\"
 	EndProjectSection
 EndProject
 Global

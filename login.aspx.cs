@@ -13,8 +13,7 @@ public partial class login : System.Web.UI.Page
     SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|Database.mdf;Integrated Security = True");
 
     protected void Page_Load(object sender, EventArgs e)
-    {
-    }
+    {}
     protected void Login_Click(object sender, EventArgs e)
     {
         String User;
@@ -27,14 +26,13 @@ public partial class login : System.Web.UI.Page
         Application["user"] = User;
 
         con.Open();
-        SqlDataAdapter adp = new SqlDataAdapter("Select Username,Password,Status from Login where Username ='"+ TextBox1.Text +"'", con);
+        SqlDataAdapter adp = new SqlDataAdapter("Select Username,Password,Status from Login where Username ='"+ User +"'", con);
         DataSet dset = new DataSet();                                                       // Creating instance of DataSet
         adp.Fill(dset, "Discon");                                                           // Filling the DataSet with the records returned by SQL statemetns written in sqldataadapter
         con.Close();
 
         DataTable dt = dset.Tables[0];
         
-
         if (User == Session["Username"].ToString() && Pass == Session["Password"].ToString())
         {
             Response.Redirect("verify.aspx");
