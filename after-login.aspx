@@ -12,7 +12,7 @@
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
-   <a>
+   <a href="index.aspx" onclick="">
        <asp:Label ID="Label2" runat="server" Text="Logout"></asp:Label>
    </a>
 </asp:Content>
@@ -22,6 +22,6 @@
 </asp:Content>--%>
 
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder5" Runat="Server">
-    <a class="add-question-btn" href="#"><b>Add Question</b></a><%--onclick="Question_Click"--%>
+    <a class="add-question-btn" href="question.aspx" onclick="Add_Question"><b>Add Question</b></a>
     <%--<a class="load-more-btn" href="#"><b>LOAD MORE</b></a>--%>
 </asp:Content>

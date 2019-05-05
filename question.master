@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="question.master.cs" Inherits="question" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Explore Knowledge</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta charset="UTF-8"/>
+	<!-- Font -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet"/>
+	<!-- Stylesheets -->
+	<link href="common-css/bootstrap.css" rel="stylesheet"/>
+	<link href="common-css/ionicons.css" rel="stylesheet"/>
+	<link href="single-post-3/css/styles.css" rel="stylesheet"/>
+	<link href="single-post-3/css/responsive.css" rel="stylesheet"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    
+
+    <header>
+		<div class="container-fluid position-relative no-side-padding">
+
+			<a href="#" class="logo"><img src="images/logo.png" alt="Logo Image"/></a>
+
+			<div class="menu-nav-icon" data-nav-menu="#main-menu"><i class="ion-navicon"></i></div>
+
+			<ul class="main-menu visible-on-click" id="main-menu">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Categories</a></li>
+				<li><asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">                
+                </asp:ContentPlaceHolder></li>
+			</ul><!-- main-menu -->
+
+			<div class="src-area">
+					<button class="src-btn" type="submit"><i class="ion-ios-search-strong"></i></button>
+					<input class="src-input" type="text" placeholder="Type of search"/>
+			</div>
+
+		</div><!-- conatiner -->
+	</header>
+
+	<section class="comment-section center-text">
+		<div class="container" runat="server">
+            <br/>
+			<h4><b>Post Question</b></h4>
+			<div class="row">
+
+				<div class="col-lg-2 col-md-0"></div>
+
+				<div class="col-lg-8 col-md-12">
+					<div class="comment-form">
+							<div class="row">
+
+								<!-- col-sm-6 -->
+
+								<div class="col-sm-12">
+<%--									<textarea name="contact-form-message" rows="2" class="text-area-messge form-control"
+										placeholder="Enter your Question" aria-required="true" aria-invalid="false"></textarea >--%>
+                                    <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server"></asp:ContentPlaceHolder>
+								</div><!-- col-sm-12 -->
+								<div class="col-sm-12" runat="server">
+                                    <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server"></asp:ContentPlaceHolder>
+									<%--<button class="submit-btn" type="submit" id="form-submit" onclick="Post_Click"><b>Post Question</b></button>--%>
+								</div><!-- col-sm-12 -->
+
+							</div><!-- row -->
+					</div><!-- comment-form -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- SCIPTS -->
+	<script src="common-js/jquery-3.1.1.min.js"></script>
+	<script src="common-js/tether.min.js"></script>
+	<script src="common-js/bootstrap.js"></script>
+	<script src="common-js/scripts.js"></script>
+</form>
+</body>
+</html>

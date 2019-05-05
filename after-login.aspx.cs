@@ -11,4 +11,15 @@ public partial class after_login : System.Web.UI.Page
     {
         userid.Text = Convert.ToString(Application["user"]);
     }
+
+    protected void Add_Question(object sender, EventArgs e)
+    {
+        Response.Redirect("question.aspx");
+    }
+
+    protected void On_Logout(object sender, EventArgs e)
+    {
+        Response.Redirect("index.aspx");
+        Session.Abandon();
+    }
 }
