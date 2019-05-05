@@ -16,7 +16,10 @@ public partial class after_login : System.Web.UI.Page
     {
         Response.Redirect("question.aspx");
     }
-
+    protected void Show_Question(object sender, EventArgs e)
+    {
+        Response.Redirect("answer.aspx");
+    }
     protected void On_Logout(object sender, EventArgs e)
     {
         Response.Redirect("index.aspx");

@@ -23,5 +23,5 @@
 
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder5" Runat="Server">
     <a class="add-question-btn" href="question.aspx" onclick="Add_Question"><b>Add Question</b></a>
-    <%--<a class="load-more-btn" href="#"><b>LOAD MORE</b></a>--%>
+    <a class="load-more-btn" href="showquestions.aspx" onclick="Show_Question"><b>Show Questions</b></a>
 </asp:Content>
