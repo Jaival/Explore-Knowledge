@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="admin.master.cs" Inherits="admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+        <meta charset="utf-8" />
+    <link href="node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet" />
+    <link href="node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+      <title>Explore Knowledge</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+<body>
+    <form id="form1" runat="server">
+   <div runat="server" class="app flex-row align-items-center">
+    <div runat="server" class="container">
+      <div runat="server"  class="row justify-content-center">
+        <div class="col-md-6" runat="server">
+          <div class="card mx-4" runat="server">
+            <div class="card-body p-4" runat="server">
+              <h1>
+            <asp:ContentPlaceHolder id="ContentPlaceHolder5" runat="server">
+        
+             </asp:ContentPlaceHolder>
+              </h1>
+              <div class="input-group mb-3" runat="server">
+                <div class="input-group-prepend" runat="server">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+                </div>
+
+              </div>
+              <div class="input-group mb-3" runat="server">
+                <div class="input-group-prepend" runat="server">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                  <br />
+                </div>     
+                  
+              </div>
+
+              <div class="input-group mb-3" runat="server">
+                <div class="input-group-prepend" runat="server">
+                  
+               
+                </div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                    
+              </div>
+
+              <div class="input-group mb-4" runat="server">
+                <div class="input-group-prepend" runat="server">
+                  
+                </div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+        
+                </asp:ContentPlaceHolder>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</form>
+</body>
+</html>

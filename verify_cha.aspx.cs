@@ -11,13 +11,12 @@ using System.Data.SqlClient;
 public partial class verify : System.Web.UI.Page
 {
     SqlConnection con = new SqlConnection(@"Data Source = (LocalDB)\MSSQLLocalDB; AttachDbFilename=|DataDirectory|Database.mdf;Integrated Security = True");
-    String ver = "Verified";
+    String ver = "Verified"; 
     String nver = "Not Verified";
-
     protected void Page_Load(object sender, EventArgs e)
     {
         con.Open();
-        SqlDataAdapter adp = new SqlDataAdapter("Select Id,Username,Email,Status FROM Login where Status ='" + nver + "'", con);
+        SqlDataAdapter adp = new SqlDataAdapter("Select Id,Username,Email,Status FROM Login where Status ='"+ nver +"'",con);
         DataSet dset = new DataSet();                                                       // Creating instance of DataSet
         adp.Fill(dset, "Login");                                                           // Filling the DataSet with the records returned by SQL statemetns written in sqldataadapter
         con.Close();
